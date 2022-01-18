@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { NavBar } from '../nav-bar/nav-bar';
+// import { NavBar } from '../nav-bar/nav-bar';
 
 require('./layout.scss');
 
@@ -11,7 +11,7 @@ export interface LayoutProps {
 
 export const Layout = (props: LayoutProps) => (
     <div className='layout'>
-        <NavBar items={props.navItems} version={props.version}/>
+        {/* <NavBar items={props.navItems} version={props.version} /> */}
         {props.children}
     </div>
 );
