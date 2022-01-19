@@ -1,7 +1,7 @@
 import * as classNames from 'classnames';
 import * as React from 'react';
 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import { Checkbox } from '../checkbox';
 import { DropDown } from '../dropdown/dropdown';
@@ -68,22 +68,22 @@ const renderFilter = (filter: TopBarFilter<any>) => (
     </DropDown>
 );
 
-const renderBreadcrumbs = (breadcrumbs: { title: string, path?: string; }[]) => (
-    <div className='top-bar__breadcrumbs'>
-        {(breadcrumbs || []).map((breadcrumb, i) => {
-            const nodes = [];
-            if (i === breadcrumbs.length - 1) {
-                nodes.push(<span key={breadcrumb.title} className='top-bar__breadcrumbs-last-item'>{breadcrumb.title}</span>);
-            } else {
-                nodes.push(<Link key={breadcrumb.title} to={breadcrumb.path}> {breadcrumb.title} </Link>);
-            }
-            if (i < breadcrumbs.length - 1) {
-                nodes.push(<span key={`${breadcrumb.title}_sep`} className='top-bar__sep' />);
-            }
-            return nodes;
-        })}
-    </div>
-);
+// const renderBreadcrumbs = (breadcrumbs: { title: string, path?: string; }[]) => (
+//     <div className='top-bar__breadcrumbs'>
+//         {(breadcrumbs || []).map((breadcrumb, i) => {
+//             const nodes = [];
+//             if (i === breadcrumbs.length - 1) {
+//                 nodes.push(<span key={breadcrumb.title} className='top-bar__breadcrumbs-last-item'>{breadcrumb.title}</span>);
+//             } else {
+//                 nodes.push(<Link key={breadcrumb.title} to={breadcrumb.path}> {breadcrumb.title} </Link>);
+//             }
+//             if (i < breadcrumbs.length - 1) {
+//                 nodes.push(<span key={`${breadcrumb.title}_sep`} className='top-bar__sep' />);
+//             }
+//             return nodes;
+//         })}
+//     </div>
+// );
 
 const renderActionMenu = (actionMenu: ActionMenu) => (
     <div>
