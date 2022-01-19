@@ -96,17 +96,17 @@ const renderActionMenu = (actionMenu: ActionMenu) => (
     </div>
 );
 
-const renderToolbar = (toolbar: Toolbar) => (
-    <div className='top-bar row' key='tool-bar'>
-        <div className='columns small-9 top-bar__left-side'>
-            {toolbar.actionMenu && renderActionMenu(toolbar.actionMenu)}
-        </div>
-        <div className='columns small-3 top-bar__right-side'>
-            {toolbar.filter && renderFilter(toolbar.filter)}
-            {toolbar.tools}
-        </div>
-    </div>
-);
+// const renderToolbar = (toolbar: Toolbar) => (
+//     <div className='top-bar row' key='tool-bar'>
+//         <div className='columns small-9 top-bar__left-side'>
+//             {toolbar.actionMenu && renderActionMenu(toolbar.actionMenu)}
+//         </div>
+//         <div className='columns small-3 top-bar__right-side'>
+//             {toolbar.filter && renderFilter(toolbar.filter)}
+//             {toolbar.tools}
+//         </div>
+//     </div>
+// );
 
 export const TopBar = (props: TopBarProps) => (
     <div>
@@ -118,6 +118,6 @@ export const TopBar = (props: TopBarProps) => (
                 <div className='top-bar__title text-truncate top-bar__right-side'>{props.title}</div>
             </div>
         </div> */}
-        {props.toolbar && renderToolbar(props.toolbar)}
+        {/* {props.toolbar && renderToolbar(props.toolbar)} */}
     </div>
 );
